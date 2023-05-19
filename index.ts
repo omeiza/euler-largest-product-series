@@ -28,12 +28,6 @@
  */
 
 function largestSeriesProduct(input: string, interval: number): number {
-	function objectToArray(thisObject: {[key: string]: number}): any[] {
-		return Object.keys(thisObject).map((k: any): any => {
-			return thisObject[k];
-		});
-	}
-
 	const chunk: {[key: string]: number} = {};
 	for (let x = 0; x < input.length; x++) {
 		let digits = [];
@@ -54,7 +48,11 @@ function largestSeriesProduct(input: string, interval: number): number {
 		chunk[digits.toLocaleString()] = product;
 	}
 
-	return Math.max(...objectToArray(chunk));
+	const chunkArray = Object.keys(chunk).map((k: any): any => {
+		return chunk[k];
+	});
+
+	return Math.max(...chunkArray);
 }
 
 console.log(largestSeriesProduct(
