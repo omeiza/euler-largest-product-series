@@ -25,3 +25,6 @@ The four adjacent digits in the 1000-digit number that have the greatest product
 Find the thirteen adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?
 
 [Project euler problem 8](https://projecteuler.net/problem=8)
+
+## Get this working
+Check the test cases and run `npm test` 😊
